@@ -3467,7 +3467,8 @@ function mostrarProductos(categoria) {
     <p><strong>Precio:</strong> $${prod.precio.toLocaleString()}</p>
     <p><strong>Tallas:</strong> ${tallasHtml}</p>
     <div class="colores"><strong>Colores:</strong> ${coloresHtml}</div>
-    <button onclick="consultarWhatsApp('${encodeURIComponent(prod.whatsapp)}')">Consultar</button>
+    <button onclick='consultarWhatsApp(${JSON.stringify(prod)})'>Consultar</button>
+
   `;
 
   contenedor.appendChild(card);
@@ -3475,11 +3476,13 @@ function mostrarProductos(categoria) {
 }
 
 
-function consultarWhatsApp(mensaje) {
-  const telefono = "+573044734713"; // Reemplazar con número real
-  const url = `https://wa.me/${telefono}?text=${mensaje}`;
+function consultarWhatsApp(prod) {
+  const telefono = "+573044734713";
+  const mensaje = `Hola! Quiero más información sobre el producto *${prod.nombre}*.\n📷 Imagen: ${window.location.origin}/${prod.imagen}`;
+  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
 }
+
 
 document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
