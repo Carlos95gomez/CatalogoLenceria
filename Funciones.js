@@ -3478,7 +3478,7 @@ function mostrarProductos(categoria) {
 
 function consultarWhatsApp(prod) {
   const telefono = "+573044734713";
-  const mensaje = `Hola, quiero más info de esta prenda: https://carlos95gomez.github.io/CatalogoLenceria/${producto.imagen}`;
+  const mensaje = `Hola, quiero más info de esta prenda: https://carlos95gomez.github.io/CatalogoLenceria/${prod.imagen}`;
 
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, "_blank");
