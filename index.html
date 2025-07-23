@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Lencería</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💋 Catálogo de Lencería</h1>
+            <p class="subtitle">Encuentra tu conjunto perfecto</p>
+        </header>
+
+        <div class="botones-categorias">
+            <button onclick="mostrarProductos('lenceria')">Lencería</button>
+            <button onclick="mostrarProductos('juguetes')">Juguetes</button>
+            <button onclick="mostrarProductos('Cremas y Aceites')">Cremas y Aceites</button>
+            <button onclick="mostrarProductos('combos')">Combos</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Productos se insertan dinámicamente desde Funciones.js -->
+        </div>
+
+        <div class="info-section">
+            <h2 class="info-title">🛍️ ¿Cómo Comprar?</h2>
+            <div class="info-content">
+                <p>¡Es súper fácil! Solo tienes que:</p>
+                <br>
+                <p>1. 📱 Hacer clic en "Consultar" en el producto que te guste</p>
+                <p>2. 💬 Te llevará directo a WhatsApp para hacer tu pedido</p>
+                <p>3. 🎁 Pregunta por nuestros combos especiales con descuento</p>
+                <p>4. 📦 Coordinamos envío y pago (Nequi/Daviplata)</p>
+                <br>
+                <a href="https://wa.me/57XXXXXXXXXX?text=Hola!%20Quiero%20información%20sobre%20el%20catálogo" 
+                   class="whatsapp-btn" target="_blank">
+                    💬 Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <h2 class="payment-title">💳 Métodos de Pago</h2>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <h3>Nequi</h3>
+                    <p>Pago inmediato</p>
+                </div>
+                <div class="payment-option">
+                    <h3>Daviplata</h3>
+                    <p>Pago seguro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Catálogo de Lencería. Todos los derechos reservados.</p>
+    </footer>
+    <script src="Funciones.js"></script>
+</body>
+</html>
